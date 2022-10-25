@@ -120,7 +120,7 @@ const Home: NextPage = () => {
                     Digite sua nova senha:
                   </p>
                   <input
-                    type="text"
+                    type="password"
                     placeholder="Nova senha"
                     className="bg-gray-700 rounded p-3 text-white font-Kanit "
                     value={newPassword}
@@ -130,7 +130,7 @@ const Home: NextPage = () => {
                     Confirme sua nova senha:
                   </p>
                   <input
-                    type="text"
+                    type="password"
                     placeholder="Confirme sua senha"
                     className="bg-gray-700 rounded p-3 text-white font-Kanit "
                     value={confirmation}
@@ -156,7 +156,7 @@ const Home: NextPage = () => {
           Reset big password!
         </button> */}
         <p className="text-white font-Kanit text-xs">
-          Thiago Bignotto 2022 - bignotto@gmail.com
+          Thiago Bignotto 2022 © bignotto@gmail.com
         </p>
       </footer>
     </div>
