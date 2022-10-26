@@ -13,6 +13,7 @@ const Confirm: NextPage = () => {
   async function loadUser() {
     const session = await supabase.auth.getSession();
 
+    console.log({ session });
     if (!session.data.session) {
       setAllRight(false);
       setIsLoading(false);
@@ -47,28 +48,13 @@ const Confirm: NextPage = () => {
             width={474}
             height={263}
           />
-          {!allRight ? (
-            <>
-              <h1 className="text-white text-3xl font-Kanit text-center mt-5">
-                Aconteceu um erro e este link não serve mais para confirmar a
-                alteração do seu endereço e e-mail.
-              </h1>
-              <p className="text-white text-xl font-Kanit text-center mt-5">
-                Volte ao aplicativo e solicite a alteração novamente.
-                <br />
-              </p>
-            </>
-          ) : (
-            <>
-              <h1 className="text-white text-lg font-bold font-Kanit text-center mt-5">
-                Seu endereço de e-mail {newEmail} foi confirmado!
-              </h1>
-              <p>
-                Use este novo endereço para fazer login no aplicativo Bolão da
-                Copa.
-              </p>
-            </>
-          )}
+
+          <h1 className="text-white text-lg font-bold font-Kanit text-center mt-5">
+            Seu endereço de e-mail foi confirmado!
+          </h1>
+          <p>
+            Use este novo endereço para fazer login no aplicativo Bolão da Copa.
+          </p>
         </main>
       )}
       <footer className="flex justify-center">
